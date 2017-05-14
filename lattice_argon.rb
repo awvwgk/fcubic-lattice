@@ -105,6 +105,7 @@ end	end end
 # Ausgabe der Ergebnisse
 xyz = File.open($output+'.xyz','w+')
 printf "Erstelle %s.xyz\n", $output
+xyz << "%i\n" % $x.length
 xyz << "#Diese Datei wurde automatisch von lattice.rb erstellt\n"
 for i in 0..($atoms-1) do
 	xyz << "Ar\t%.10f\t%.10f\t%.10f\n" % [$x[i],$y[i],$z[i]]
